@@ -3,7 +3,7 @@ import { View, Text, StyleSheet, Image, ImageBackground } from 'react-native'
 
 const urlImg = 'https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1100&q=80'
 const catImg = 'https://images.unsplash.com/photo-1487300001871-12053913095d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80'
-const CardPet = ({ name, time, img, imgPet = catImg }) => {
+const CardPet = ({ name, time, img, imgPet }) => {
     return (
         <View style={styles.container}>
             <View style={[styles.profile, { alignItems: 'center' }]}>
