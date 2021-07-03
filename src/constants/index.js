@@ -6,5 +6,6 @@ export const size = {
 
 export const colors = {
     primary: '#6c4ef5',
-    secondary: '#feb7e6'
+    secondary: '#feb7e6',
+    secondaryLigth: '#ffecf9'
 }

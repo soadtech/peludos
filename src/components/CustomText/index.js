@@ -1,9 +1,9 @@
 import React from 'react';
 import { Text } from 'react-native'
 
-const CustomText = ({ children, size, ...rest }) => {
+const CustomText = ({ children, size, lef = 0, ...rest }) => {
     return (
-        <Text style={{ ...rest, fontSize: size }}>{children}</Text>
+        <Text style={{ ...rest, fontSize: size, marginLeft: lef }}>{children}</Text>
     );
 }
 
