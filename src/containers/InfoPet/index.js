@@ -57,7 +57,7 @@ const InfoPet = ({ navigation }) => {
 
                             <View style={{ marginTop: 20 }}>
                                 <View style={{ marginBottom: 15 }}>
-                                    <CustomText size={size.medium}>Detalle:</CustomText>
+                                    <CustomText size={size.medium}>Details:</CustomText>
                                 </View>
                                 <CustomText size={size.normal} color={colors.gray} >Hello, i am Fernando Ropero, I have a lot of cats in my house and i find it difficult to take take care of them if you wish to take Emilia please contact me.</CustomText>
                             </View>
