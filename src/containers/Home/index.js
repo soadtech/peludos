@@ -3,6 +3,7 @@ import { View, Text, SafeAreaView, StyleSheet, FlatList } from 'react-native'
 import Header from '../../components/Header';
 import BoxPets from '../../components/BoxPets';
 import CardPet from '../../components/CardPet';
+import Publish from '../../components/Publish';
 
 const data = [
     {
@@ -38,6 +39,9 @@ const Home = ({ navigation }) => {
         <SafeAreaView style={{ flex: 1 }}>
             <View style={styles.container}>
                 <Header />
+                <View style={{ marginTop: 20 }}>
+                    <Publish />
+                </View>
                 <View style={{ marginTop: 20 }}>
                     <BoxPets />
                 </View>
