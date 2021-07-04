@@ -1,4 +1,5 @@
-import Home from '../../containers/Home'
+import Home from '../../containers/Home';
+import Chats from '../../containers/Chats';
 
 export default [
     {
@@ -8,10 +9,10 @@ export default [
         component: Home
     },
     {
-        path: 'Chat',
+        path: 'Chats',
         name: 'Chat',
         icon: 'https://image.flaticon.com/icons/png/512/589/589723.png',
-        component: Home
+        component: Chats
     },
     {
         path: 'Bookmark',
