@@ -9,5 +9,6 @@ export const colors = {
     primaryLight: '#dad3fa',
     secondary: '#feb7e6',
     secondaryLigth: '#ffecf9',
-    gray: '#ababab'
+    gray: '#ababab',
+    grayLight: '#eff1f3'
 }

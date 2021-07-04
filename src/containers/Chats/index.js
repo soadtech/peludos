@@ -40,9 +40,9 @@ const data = [
         active: true
     },
 ]
-const Chats = () => {
+const Chats = ({ navigation }) => {
     const renderItem = ({ item }) => (
-        <BoxChat key={item.id} name={item.name} middlename={item.middlename} imgProfile={item.img} lastMessage={item.lastMessage} time={item.time} active={item.active} me={item.me} read={item.read} />
+        <BoxChat handler={() => navigation.navigate('Chat')} key={item.id} name={item.name} middlename={item.middlename} imgProfile={item.img} lastMessage={item.lastMessage} time={item.time} active={item.active} me={item.me} read={item.read} />
     )
     return (
         <SafeAreaView style={{ flex: 1 }}>

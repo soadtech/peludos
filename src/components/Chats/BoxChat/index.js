@@ -3,9 +3,9 @@ import { View, Text, TouchableOpacity, StyleSheet, Image } from 'react-native';
 import CustomText from '../../CustomText';
 import { size, colors } from '../../../constants'
 
-const BoxChat = ({ name, middlename, imgProfile, lastMessage, time, me, read, active }) => {
+const BoxChat = ({ handler, name, middlename, imgProfile, lastMessage, time, me, read, active }) => {
     return (
-        <TouchableOpacity style={styles.boxChat}>
+        <TouchableOpacity onPress={handler} style={styles.boxChat}>
             <View>
                 <View style={{ position: 'relative' }}>
                     <Image style={styles.profile} resizeMode='contain' source={{ uri: imgProfile }} />
