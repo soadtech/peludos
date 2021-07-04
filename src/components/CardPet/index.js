@@ -1,7 +1,14 @@
 import React from 'react';
 import { View, Text, StyleSheet, Image, ImageBackground, TouchableOpacity } from 'react-native'
+import useAuth from '../../hooks/useAuth';
 
-const CardPet = ({ name, time, img, imgPet, handler }) => {
+const CardPet = ({ name, time, img, imgPet, handler, navigation }) => {
+    const { authenticated } = useAuth();
+    const handleSavePet = () => {
+        if (!authenticated) {
+            navigation.navigate('Login')
+        }
+    }
     return (
         <TouchableOpacity onPress={handler} style={styles.container}>
             <View style={[styles.profile, { alignItems: 'center' }]}>
@@ -12,7 +19,10 @@ const CardPet = ({ name, time, img, imgPet, handler }) => {
                         <Text style={{ fontSize: 18 }}>{time} min</Text>
                     </View>
                 </View>
-                <Image style={styles.bookmark} resizeMode='contain' source={require('../../assets/bookmark.png')} />
+                <TouchableOpacity onPress={handleSavePet}>
+                    <Image style={styles.bookmark} resizeMode='contain' source={require('../../assets/bookmark.png')} />
+                </TouchableOpacity>
+
             </View>
 
             <View style={{ marginTop: 10 }}>

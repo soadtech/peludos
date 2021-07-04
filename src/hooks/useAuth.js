@@ -16,7 +16,7 @@ const useAuth = (navigation) => {
         getData()
     }, [])
 
-    if (!authenticated) {
+    if (!authenticated && navigation) {
         navigation.navigate('Login')
     }
 

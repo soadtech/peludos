@@ -31,7 +31,7 @@ const data = [
 const Home = ({ navigation }) => {
 
     const renderItem = ({ item }) => (
-        <CardPet handler={() => navigation.navigate('InfoPet')} name={item.name} time={item.time} img={item.img} imgPet={item.imgPet} />
+        <CardPet navigation={navigation} handler={() => navigation.navigate('InfoPet')} name={item.name} time={item.time} img={item.img} imgPet={item.imgPet} />
     )
 
     return (
