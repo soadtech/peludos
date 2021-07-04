@@ -1,5 +1,6 @@
 import InfoPet from '../../containers/InfoPet'
-import Chat from '../../containers/Chat'
+import Chat from '../../containers/Chat';
+import Login from '../../containers/Login'
 
 export default [
     {
@@ -11,5 +12,10 @@ export default [
         path: 'Chat',
         name: 'Chat',
         component: Chat
+    },
+    {
+        path: 'Login',
+        name: 'Login',
+        component: Login
     },
 ]
