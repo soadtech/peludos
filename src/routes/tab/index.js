@@ -1,5 +1,6 @@
 import Home from '../../containers/Home';
 import Chats from '../../containers/Chats';
+import Bookmark from '../../containers/BookMark';
 
 export default [
     {
@@ -18,7 +19,7 @@ export default [
         path: 'Bookmark',
         name: 'Guardados',
         icon: 'https://image.flaticon.com/icons/png/512/748/748002.png',
-        component: Home
+        component: Bookmark
     },
     {
         path: 'Profile',
