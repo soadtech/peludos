@@ -1,5 +1,5 @@
 import React from 'react';
-import { Image, Text } from 'react-native'
+import { Image, Text, View } from 'react-native'
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createStackNavigator } from '@react-navigation/stack';
@@ -19,7 +19,12 @@ function Home () {
             backgroundColor: '#e7305b'
           },
           tabBarLabel: ({ focused }) => {
-            return <Text style={{ color: focused ? colors.primary : colors.gray, fontSize: 12 }}>{route.name}</Text>
+            return (
+              <View>
+                <Text style={{ color: focused ? colors.primary : colors.gray, fontSize: 12 }}>{route.name}</Text>
+                {focused && (<View style={{ width: 20, height: 2, backgroundColor: colors.primary, borderRadius: 10, alignSelf: 'center' }}></View>)}
+              </View>
+            )
           },
           tabBarIcon: ({ focused }) => {
             return <Image style={{ width: 20, height: 20 }} resizeMode='contain' source={{ uri: route.icon }} />
