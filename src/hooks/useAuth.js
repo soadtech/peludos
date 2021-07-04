@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { getStorage } from '../utils';
 
-const useAuth = () => {
+const useAuth = (navigation) => {
     const [authenticated, setAuthenticated] = useState(false)
     const [user, setUser] = useState({});
 
@@ -15,6 +15,10 @@ const useAuth = () => {
     useEffect(() => {
         getData()
     }, [])
+
+    if (!authenticated) {
+        navigation.navigate('Login')
+    }
 
     return {
         authenticated,

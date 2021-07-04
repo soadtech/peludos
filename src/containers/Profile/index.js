@@ -5,11 +5,7 @@ import Login from '../Login'
 
 const Profile = ({ navigation }) => {
 
-    const { authenticated } = useAuth();
-    if (!authenticated) {
-        navigation.navigate('Login')
-        return null
-    }
+    const { } = useAuth(navigation);
     return (
         <SafeAreaView>
             <Text>Profile</Text>

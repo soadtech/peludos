@@ -3,6 +3,7 @@ import { View, Text, SafeAreaView, StyleSheet, FlatList } from 'react-native';
 import CustomText from '../../components/CustomText';
 import { size } from '../../constants';
 import BoxChat from '../../components/Chats/BoxChat'
+import useAuth from '../../hooks/useAuth';
 
 
 const data = [
@@ -41,6 +42,7 @@ const data = [
     },
 ]
 const Chats = ({ navigation }) => {
+    const { authenticated } = useAuth(navigation);
     const renderItem = ({ item }) => (
         <BoxChat handler={() => navigation.navigate('Chat')} key={item.id} name={item.name} middlename={item.middlename} imgProfile={item.img} lastMessage={item.lastMessage} time={item.time} active={item.active} me={item.me} read={item.read} />
     )

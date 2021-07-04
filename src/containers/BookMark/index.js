@@ -2,6 +2,7 @@ import React from 'react';
 import { View, Text, SafeAreaView, StyleSheet, FlatList } from 'react-native'
 import CardPet from '../../components/CardPet';
 import Header from '../../components/Header';
+import useAuth from '../../hooks/useAuth';
 const data = [
     {
         id: '1',
@@ -26,7 +27,8 @@ const data = [
     },
 ]
 
-const BookMark = () => {
+const BookMark = ({ navigation }) => {
+    const { } = useAuth(navigation);
     const renderItem = ({ item }) => (
         <CardPet handler={() => navigation.navigate('InfoPet')} name={item.name} time={item.time} img={item.img} imgPet={item.imgPet} />
     )
